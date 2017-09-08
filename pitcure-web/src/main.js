@@ -9,11 +9,13 @@ Vue.config.productionTip = false;
 import axios from 'axios';
 window.axios=axios;
 
-axios.defaults.baseURL='http://localhost:9001/';
+// axios.defaults.baseURL='http://localhost:9001/';
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-default/index.css';
 
+Vue.use(ElementUI);
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
