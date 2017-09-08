@@ -2,6 +2,7 @@
   <el-upload
     class="avatar-uploader"
     action="http://localhost:9001/pic/upload"
+    :data="message"
     :show-file-list="false"
     :on-success="handleAvatarSuccess"
     :before-upload="beforeAvatarUpload">
@@ -15,7 +16,10 @@
   export default {
     data() {
       return {
-        imageUrl: ''
+        imageUrl: '',
+        message:{
+            msg:'老师好'
+        }
       };
     },
     methods: {
