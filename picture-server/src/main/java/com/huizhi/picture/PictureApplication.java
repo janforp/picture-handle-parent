@@ -1,7 +1,9 @@
 package com.huizhi.picture;
 
+import com.huizhi.picture.context.CustomProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -12,10 +14,11 @@ import org.springframework.web.filter.CorsFilter;
  * 该类是：
  */
 @SpringBootApplication
-public class PictureApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(PictureApplication.class, args);
-    }
+@EnableConfigurationProperties(CustomProperties.class)
+public class PictureApplication { public static void main(String[] args) {
+    SpringApplication.run(PictureApplication.class, args);
+}
+
 
     @Bean
     public CorsFilter corsFilter() {

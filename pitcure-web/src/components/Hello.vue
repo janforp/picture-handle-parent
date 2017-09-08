@@ -1,7 +1,7 @@
 <template>
   <el-upload
     class="avatar-uploader"
-    action="http://localhost:9001/pic/upload"
+    action="http://localhost:9001/pic/mergePicture"
     :data="message"
     :show-file-list="false"
     :on-success="handleAvatarSuccess"
